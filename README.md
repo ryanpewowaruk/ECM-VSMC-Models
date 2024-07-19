@@ -1,4 +1,4 @@
-Necessary files for manuscript by Pewowaruk, 2024
+Necessary files for manuscript by Pewowaruk et al., 2024
 
 The files within this Github repository recreate the figures provided in the above manuscript and example code for calculating the arterial stiffness models.
 The clinical data used in the manuscript cannot be shared.
