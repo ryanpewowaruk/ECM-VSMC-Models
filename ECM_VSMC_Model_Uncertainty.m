@@ -8,8 +8,8 @@
 %%%% Local Carotid Artery Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Measurement Uncertainty (1 Standard Deviation)
-U_Dd = 0.1;
-U_DeltaD = 0.05;
+U_Dd = 0.05;
+U_Ds = 0.05;
 U_Pd = 5;
 U_Ps = 7;
 U_PWV = 0.8;
@@ -28,13 +28,11 @@ Ps = repmat(135, [18, 1]);
 
 %% Add in Measurement Uncertainty - One at a time method
 Dd_NTG(1:2) = Dd_NTG(1:2) + [U_Dd; -U_Dd];
-Ds_NTG(1:2) = Ds_NTG(1:2) + [U_Dd; -U_Dd];
 
 Dd(3:4) = Dd(3:4) + [U_Dd; -U_Dd];
-Ds(3:4) = Ds(3:4) + [U_Dd; -U_Dd];
 
-Ds_NTG(5:6) = Ds_NTG(5:6) + [U_DeltaD; -U_DeltaD];
-Ds(7:8) = Ds(7:8) + [U_DeltaD; -U_DeltaD];
+Ds_NTG(5:6) = Ds_NTG(5:6) + [U_Ds; -U_Ds];
+Ds(7:8) = Ds(7:8) + [U_Ds; -U_Ds];
 
 Pd_NTG(9:10) = Pd_NTG(9:10) + [U_Pd; -U_Pd];
 Pd(11:12) = Pd(11:12) + [U_Pd; -U_Pd];
